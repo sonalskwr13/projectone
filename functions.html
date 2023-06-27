@@ -1,0 +1,127 @@
+<script>
+	// function with argument and no return value
+	console.log("to make function for factorial")
+	function factorial(n)
+	{
+		var f=1; 
+		for(var i=1; i<=n; i++)
+		{
+			f=f*i;
+		}
+		console.log(f+" is factorial of "+n);
+
+	}
+	factorial(5);
+	factorial(6);
+	console.log("to make function for checkeven") 
+	function checkeven(n)
+	{
+		if(n%2==0)
+		{
+			console.log(n+" is even");
+		}
+		else
+		{
+			console.log(n+" is odd");
+		}
+    }
+    checkeven(4);
+    checkeven(5);
+    checkeven(6);
+    checkeven(9);
+    // tocheck number is prime or not using function
+    function checkprime(n)
+    {
+    	if(n==0 || n==1)
+    	{
+    		console.log(n+" is not prime");
+    	}
+    	else
+    	{
+    		for(var i=2; i<=n; i++)
+    		{
+    			if(n%i==0)
+    			{
+    				break;
+    			}
+    		}
+    		if(n==i)
+    		{
+    			console.log(n+" is prime")
+    		}
+    		else
+    		{
+    			console.log(n+"  is not prime")
+    		}
+    	}
+    }
+    checkprime(5);
+    checkprime(9);
+    checkprime(2);
+    checkprime(7);
+    //to write a function for reverse number
+    function revnum(n)
+    {
+    	var r=0;
+    	var s=0;
+    	while(n>0)
+    	{
+    		r=n%10
+    		s=s*10+r;
+    		n=parseInt(n/10);
+    	}
+    	console.log(s)
+
+    }
+    revnum(123);
+    revnum(45678);
+    //to write function for checkarmstrong or not
+    
+    //to write a function for checkpalindrome
+    
+	function checkpalindrome(n)
+		{
+			var t=n;
+			var s=0;
+			while(n>0)
+			{
+				r=n%10;
+				s=s*10+r;
+				n=parseInt(n/10);
+			}
+			console.log(s);
+			if(t==s)
+			console.log( t+" is palindrome");
+			else
+			console.log( t+" is not palindrome");
+		}
+		checkpalindrome(121);
+		checkpalindrome(78654);
+	</script>
+	<script>
+		function checkarmstrong(n)
+			{
+				var n=n+'';
+				var l=n.length;
+				n=parseInt(n);
+				var sum=0;
+				var t=n;
+				while(n>0)
+				{
+					r=n%10;
+					sum=sum+r**l;
+					n=parseInt(n/10);
+				}
+				console.log(sum);
+				if(t==sum)
+				{
+					console.log(t+" is armstrong number");
+				}
+				else
+				{
+					console.log(t+" is not armstrong number");
+				}
+			}
+			checkarmstrong(153);
+			checkarmstrong(1674);
+		</script>
